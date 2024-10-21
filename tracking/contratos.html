@@ -3,11 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/index.css">
     <title>Contratos</title>
 </head>
 
 <body>
+    <header>
+        <!--Crear una barra de navegación (osea escribir algo para buscar algo jsajads).-->
+    
+        <div class="header-container">
+            <div class="navigation-bar">
+                <input type="text" placeholder="Buscar..." aria-label="Buscar">
+                <button id="toggleLightMode" aria-label="Cambiar modo de iluminación">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" fill="#e8eaed" viewBox="0 0 24 24">
+                        <path d="M12 4.5V3h-1v1.5h1zm0 15.5v1.5h-1v-1.5h1zm6.364-11.863l1.06-1.06-.707-.707-1.06 1.06.707.707zM5.303 17.66l-1.06 1.06-.707-.707 1.06-1.06.707.707zm12.364 1.06l1.06 1.06.707-.707-1.06-1.06-.707.707zM4.93 6.07l-1.06-1.06-.707.707 1.06 1.06.707-.707zM21 13.5h1.5v-1H21v1zm-18 0H2.5v-1H3v1zm9-7.5A4.5 4.5 0 1 1 7.5 10.5 4.51 4.51 0 0 1 12 6zm0 7A2.5 2.5 0 1 0 9.5 11.5 2.5 2.5 0 0 0 12 13z"/>
+                    </svg>
+                </button>
+            </div>
+        
+                <!-- Logo circular de perfil con opciones de ver perfil o cerrar sesión -->
+            <div class="view-profile">
+                <div class="profile-logo">
+                    <img src="/icons/account_circle_40dp_E8EAED_FILL0_wght400_GRAD0_opsz40.png" alt="Foto de perfil">
+                </div>
+                <div class="profile-options">
+                    <a href="#">Ver Perfil</a>
+                    <a href="#">Cerrar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <aside id="sidebar">
         <ul>
             <li>
@@ -43,22 +69,7 @@
         </ul>
     </aside>    
 
-    <header>
-        <!--Crear una barra de navegación (osea escribir algo para buscar algo jsajads).-->
-        <div class="navigation-bar">
-
-        </div>
-
-        <!--Crear un boton (que se vea solo el icono) para cambiar el modo de iluminación de blanco a negro y viceversa.-->
-        <div class="button-change-lights">
-
-        </div>
-
-        <!--Crear un logo circular para visualizar tu perfil (Que aparezca para ver perfil o cerrar sesión).-->
-        <div class="view-profile">
-
-        </div>
-    </header>
+    <button id="toggleSidebar">☰</button>
 
     <main>
         <div>
@@ -76,5 +87,6 @@
 
     <footer></footer>
 
+    <script src="/scripts/main.js"></script>
 </body>
 </html>
