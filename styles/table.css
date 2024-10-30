@@ -1,0 +1,78 @@
+/* Filas aprobadas */
+.approved-project::before {
+    color: green;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Botón de agregar */
+#addProjectBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#addProjectBtn:hover {
+    background-color: #45a049;
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 8px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pagination button:hover {
+    background-color: #bbb;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #e8eaed;
+}
+
+body.dark-mode table {
+    background-color: #2c2c2c;
+    color: #e8eaed;
+}
+
+body.dark-mode th {
+    background-color: #3a3a3a;
+}
+
+body.dark-mode tr:nth-child(even) {
+    background-color: #3a3a3a;
+}
+
+body.dark-mode #addProjectBtn {
+    background-color: #5a5a5a;
+}
+
+body.dark-mode .pagination button {
+    background-color: #555;
+}
