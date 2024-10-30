@@ -13,6 +13,31 @@ body {
     flex-direction: column;
 }
 
+.container {
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+thead {
+    background-color: #4CAF50; /* Color para la cabecera */
+    color: white;
+} 
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
 main {
     margin-left: 0;
     margin-top: 60px; /* Espacio debajo del header */
