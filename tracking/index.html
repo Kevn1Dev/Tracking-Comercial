@@ -74,25 +74,29 @@
     <main>
         <div class="container">
             <h1>Proyectos Aprobados:</h1>
+            <table id="projectsTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Monto</th>
+                        <th>Estado</th>
+                        <th>Fecha de Aprobación</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="projectsBody">
+                    <!-- Filas de proyectos aprobados se generarán aquí automáticamente -->
+                </tbody>
+            </table>
+    
+            <div class="pagination" id="pagination">
+                <!-- Controles de paginación generados automáticamente -->
+            </div>
+    
+            <button id="addProjectBtn">Agregar Proyecto</button>
         </div>
-
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Monto</th>
-                <th>Estado</th>
-                <th>Fecha de Aprobación</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <!--Hacer que de forma "Automatica" se creén las tablas con los datos correspondientes de cada proyecto (Nombre, Monto, Estado, Fecha de aprobación) utilizando php and Js-->
-            </tr>
-        </tbody>
-
-        <!--Poner un div donde se vea el numero de "paginas" que hay en total para ver la totalidad de proyectos aprobados, con flechas y numeros para ir cambiando.-->
     </main>
+    
 
     <footer></footer>
 
