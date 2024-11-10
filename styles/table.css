@@ -5,11 +5,12 @@
     margin-right: 10px;
 }
 
+/* Filas pares con color alterno */
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* Botón de agregar */
+/* Botón para agregar proyecto */
 #addProjectBtn {
     background-color: #4CAF50;
     color: white;
