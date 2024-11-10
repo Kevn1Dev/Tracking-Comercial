@@ -1,5 +1,4 @@
-
-/* Estilo general */
+/* Estilo general del sidebar */
 #sidebar {
     position: fixed;
     top: 60px; /* Espacio debajo del header */
@@ -13,12 +12,12 @@
     overflow-y: auto;
 }
 
-/* Estilo visible */
+/* Sidebar visible */
 #sidebar.open {
     transform: translateX(0);
 }
 
-/* Estilo elementos dentro del aside */
+/* Estilo para los elementos dentro del sidebar */
 #sidebar ul {
     list-style-type: none;
     padding: 0;
@@ -44,13 +43,13 @@
     font-size: 18px;
 }
 
-
+/* Estilo de los items activos */
 #sidebar ul li.active a {
     background-color: #3a3a3a;
     border-radius: 5px;
 }
 
-/* Boton para abrir/cerrar el sidebar */
+/* Botón para abrir/cerrar el sidebar */
 #toggleSidebar {
     position: fixed;
     top: 15px;
@@ -68,7 +67,7 @@
     background-color: #3a3a3a;
 }
 
-/* Estilo para celular */
+/* Estilo para dispositivos móviles */
 @media (max-width: 768px) {
     #sidebar {
         width: 200px;
@@ -82,3 +81,4 @@
         left: 5px;
     }
 }
+
