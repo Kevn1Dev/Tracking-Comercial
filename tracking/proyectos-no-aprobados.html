@@ -9,29 +9,24 @@
 
 <body>
     <header>
-        <!--Crear una barra de navegación (osea escribir algo para buscar algo jsajads).-->
-    
+        <!--Crear una barra de navegación (osea escribir algo para buscar algo jsajads).-->    
         <div class="header-container">
-            <div class="navigation-bar">
-                <input type="text" placeholder="Buscar..." aria-label="Buscar">
-                <button id="toggleLightMode" aria-label="Cambiar modo de iluminación">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" fill="#e8eaed" viewBox="0 0 24 24">
-                        <path d="M12 4.5V3h-1v1.5h1zm0 15.5v1.5h-1v-1.5h1zm6.364-11.863l1.06-1.06-.707-.707-1.06 1.06.707.707zM5.303 17.66l-1.06 1.06-.707-.707 1.06-1.06.707.707zm12.364 1.06l1.06 1.06.707-.707-1.06-1.06-.707.707zM4.93 6.07l-1.06-1.06-.707.707 1.06 1.06.707-.707zM21 13.5h1.5v-1H21v1zm-18 0H2.5v-1H3v1zm9-7.5A4.5 4.5 0 1 1 7.5 10.5 4.51 4.51 0 0 1 12 6zm0 7A2.5 2.5 0 1 0 9.5 11.5 2.5 2.5 0 0 0 12 13z"/>
-                    </svg>
-                </button>
+            <button id="toggleSidebar">☰</button>
+            <input type="text" placeholder="Buscar proyectos..." class="navigation-bar">
+            <div class="button-change-lights">
+                <button id="toggleLightMode">🌙</button>
             </div>
-        
-                <!-- Logo circular de perfil con opciones de ver perfil o cerrar sesión -->
+        <!-- Logo circular de perfil con opciones de ver perfil o cerrar sesión -->
             <div class="view-profile">
                 <div class="profile-logo">
-                    <img src="/icons/account_circle_40dp_E8EAED_FILL0_wght400_GRAD0_opsz40.png" alt="Foto de perfil">
+                    <img src="/icons/account_circle_40dp_E8EAED_FILL0_wght400_GRAD0_opsz40.png" alt="Perfil">
                 </div>
                 <div class="profile-options">
-                    <a href="#">Ver Perfil</a>
-                    <a href="#">Cerrar Sesión</a>
+                    <a href="#">Perfil</a>
+                    <a href="#">Cerrar sesión</a>
                 </div>
             </div>
-        </div>
+        </div>        
     </header>
 
     <aside id="sidebar">
@@ -40,58 +35,44 @@
                 <a href="index.html">Tracking Comercial</a>
             </li>
             <li>
-                <!--Acá se van a visualizar una lista de todos los proyectos aprobados (de todos los usuarios) con nombre, fondo inicial($$$), status (Obligatoriamente tiene que ser aprobado) y fecha de aprobación.-->
                 <a href="index.html">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <!-- Aca podes ver los contratos de los clientes y los proyectos en espera (Unicamente se van a mostrar los que estan en espera con luz/color amarrilla/o).-->
                 <a href="contratos.html">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-80q-50 0-85-35t-35-85v-120h120v-560h600v680q0 50-35 85t-85 35H240Zm480-80q17 0 28.5-11.5T760-200v-600H320v480h360v120q0 17 11.5 28.5T720-160ZM360-600v-80h360v80H360Zm0 120v-80h360v80H360ZM240-160h360v-80H200v40q0 17 11.5 28.5T240-160Zm0 0h-40 400-360Z"/></svg>
                     <span>Contratos</span>
                 </a>
             </li>
             <li class="active">
-                <!-- Aca podes explorar otros proyectos que fueron rechazados (para reutilizar o mejorar y tener un registro de ello).-->
                 <a href="proyectos-no-aprobados.html">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m376-320 104-104 104 104 56-56-104-104 104-104-56-56-104 104-104-104-56 56 104 104-104 104 56 56ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-480H160v480Zm0 0v-480 480Z"/></svg>
                     <span>Proyectos No Aprobados</span>
                 </a>
             </li>
-            <li>
-                <!-- Acá todavia no sé que otra cosa agregarle-->
-                <a href="#">
-                    <span>???</span>
-                </a>
-            </li>
         </ul>
     </aside>
-
-    <button id="toggleSidebar">☰</button>
     
     <main>
         <div class="container">
-            <h1>Proyectos No Aprobados:</h1>
+            <h1>Proyectos No Aprobados</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Monto</th>
+                        <th>Motivo de Rechazo</th>
+                        <th>Fecha de Rechazo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="rejectedProjectsBody">
+                    <!-- Filas generadas dinámicamente con JS -->
+                </tbody>
+            </table>
         </div>
-
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Monto</th>
-                <th>Estado</th>
-                <th>Fecha de Aprobación</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <!--Hacer que de forma "Automatica" se creén las tablas con los datos correspondientes de cada proyecto (Nombre, Monto, Estado, Fecha de aprobación) utilizando php and Js-->
-            </tr>
-        </tbody>
-
-        <!--Poner un div donde se vea el numero de "paginas" que hay en total para ver la totalidad de proyectos aprobados, con flechas y numeros para ir cambiando.-->
     </main>
 
     <footer></footer>    
