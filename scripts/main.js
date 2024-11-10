@@ -82,12 +82,7 @@ function renderProjects(page = 1) {
     const rejectedProjectsBody = document.getElementById('rejectedProjectsBody');
     rejectedProjectsBody.innerHTML = "";
 
-    // Crear filas para cada proyecto
-    paginatedPendingProjects.forEach(project => {
-        const row = createProjectRow(project);
-        rejectedProjectsBody.appendChild(row);
-    })
-
+    // Crear filas para cada proyecto   
     paginatedApprovedProjects.forEach(project => {
         const row = createProjectRow(project);
         projectsBody.appendChild(row);
@@ -95,26 +90,12 @@ function renderProjects(page = 1) {
 
     // Paginación
     renderPagination(approvedProjects.length, page);
-    renderPagination(pendingProjects.length, page);
 }  
 
 // Crear una fila de proyecto
 function createProjectRow(project) {
     const row = document.createElement('tr');
     row.className = "approved-project";
-    row.innerHTML = `
-        <td>${project.name}</td>
-        <td>${project.amount}</td>
-        <td>${project.status}</td>
-        <td>${project.approvalDate}</td>
-        <td><button class="deleteBtn">Eliminar</button></td>
-    `;
-    return row;
-}
-
-function createProjectRow(project) {
-    const row = document.createElement('tr');
-    row.className = "pending-project";
     row.innerHTML = `
         <td>${project.name}</td>
         <td>${project.amount}</td>
