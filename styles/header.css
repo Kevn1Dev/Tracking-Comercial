@@ -1,7 +1,4 @@
-
-
-/* Header */
-/* Header */
+/* Estilo del header */
 header {
     position: fixed;
     top: 0;
@@ -17,6 +14,7 @@ header {
     padding: 0 20px;
 }
 
+/* Contenedor dentro del header */
 .header-container {
     display: flex;
     justify-content: center;
@@ -24,6 +22,7 @@ header {
     flex: 1;
 }
 
+/* Barra de navegación dentro del header */
 .navigation-bar {
     display: flex;
     align-items: center;
@@ -37,7 +36,7 @@ header {
     width: 300px;
 }
 
-/* Botón cambiar el modo oscuro/luz */
+/* Botones de navegación */
 .button-change-lights button, .navigation-bar button {
     background: none;
     border: none;
@@ -49,7 +48,7 @@ header {
     opacity: 0.7;
 }
 
-/* Estilo del perfil */
+/* Estilo para el perfil */
 .view-profile {
     position: relative;
     display: flex;
@@ -99,4 +98,3 @@ body.dark-mode {
 body.dark-mode header {
     background-color: #1c1c1c;
 }
-
