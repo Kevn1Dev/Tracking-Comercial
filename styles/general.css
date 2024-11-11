@@ -14,32 +14,9 @@ body {
     min-height: 100vh;
 }
 
-/* Contenedor general */
-.container {
-    padding: 20px;
-}
-
-/* Encabezado principal */
-h1 {
-    color: #333;
-}
-
-/* Tabla con bordes y espaciado */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-thead {
-    background-color: #4CAF50; /* Color para la cabecera */
-    color: white;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
+/* Sidebar abierto ajusta la vista */
+#sidebar.open ~ main {
+    margin-left: 250px; /* Ajusta el contenido cuando el aside está abierto */
 }
 
 /* Estilo para el contenido principal */
@@ -48,9 +25,4 @@ main {
     margin-top: 60px; /* Espacio debajo del header */
     padding: 20px;
     transition: margin-left 0.3s ease;
-}
-
-/* Sidebar abierto ajusta la vista */
-#sidebar.open ~ main {
-    margin-left: 250px; /* Ajusta el contenido cuando el aside está abierto */
 }
