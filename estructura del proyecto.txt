@@ -1,0 +1,11 @@
+|-- index.html (login)
+|-- dashboard.html (página principal)
+|-- proyectos-aprobados.html (proyectos aprobados)
+|-- proyectos-no-aprobados.html (proyectos no aprobados)
+|-- proyectos-en-espera.html (proyectos en espera)
+|-- assets/
+    |-- css/
+        |-- styles.css
+    |-- js/
+        |-- app.js
+    |-- img/
