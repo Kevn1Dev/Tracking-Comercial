@@ -2,7 +2,10 @@ package com.trackingcomercial.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Optional;
 
+import com.trackingcomercial.entity.Proyecto;
 import com.trackingcomercial.repository.ProyectoRepository;
 
 @Service
@@ -11,7 +14,7 @@ public class ProyectoService {
     @Autowired
     private ProyectoRepository proyectoRepository;
 
-    public list<Proyecto> listarProyectos(){
+    public List<Proyecto> listarProyectos() {
         return proyectoRepository.findAll();
     }
 
