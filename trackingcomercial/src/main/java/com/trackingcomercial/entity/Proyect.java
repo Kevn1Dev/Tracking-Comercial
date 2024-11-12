@@ -1,20 +1,20 @@
 package com.trackingcomercial.entity;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Proyect {
 
-    private int id;
+    private Long id;
     private String name;
     private String description;
     private double mount;
-    private LocalDateTime fecha;
+    private LocalDate fecha;
     private String status;
 
     public Proyect(){
     }
 
-    public Proyect(String name, String description, double mount, LocalDateTime fecha, String status){
+    public Proyect(String name, String description, double mount, LocalDate fecha, String status){
         this.name=name;
         this.description=description;
         this.mount=mount;
@@ -22,11 +22,11 @@ public class Proyect {
         this.status=status;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -54,11 +54,11 @@ public class Proyect {
         this.mount = mount;
     }
 
-    public LocalDateTime getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDateTime fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
