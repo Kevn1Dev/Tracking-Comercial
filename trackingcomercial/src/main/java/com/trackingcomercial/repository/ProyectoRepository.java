@@ -18,6 +18,7 @@ public interface ProyectoRepository extends JpaRepository<Proyecto, Long> {
     // Consulta personalizada para buscar por el nombre
     @Query("SELECT p FROM Proyecto p WHERE LOWER(p.name) LIKE LOWER(CONCAT('%', :name, '%'))")
     List<Proyecto> findProyectosByName(@Param("name") String name);
+    
 }
 
 // 
