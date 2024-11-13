@@ -3,7 +3,6 @@ package com.trackingcomercial.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
-import java.util.Optional;
 
 import com.trackingcomercial.entity.Proyecto;
 import com.trackingcomercial.repository.ProyectoRepository;
@@ -18,8 +17,9 @@ public class ProyectoService {
         return proyectoRepository.findAll();
     }
 
-    public Optional<Proyecto> obtenerProyectoPorId(Long Id){
-        return proyectoRepository.findById(Id);
+    public Proyecto obtenerProyectoPorId(Long Id){
+        return proyectoRepository.findById(Id)
+                .orElseThrow(() -> new ResourceNotFoundException("Proyecto no Encontrado"));
     }
 
     public Proyecto guardar(Proyecto proyecto){
